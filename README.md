@@ -1,17 +1,17 @@
 # virustable
 ## About This Project
-This github repo will created to complete a 48 hours remote test for a Web UI Developer Position.
+This github repo was created to complete a 48 hours project.
 
 **The requirement is as following:**
 * Using Python/Django, Javascript/jQuery, CSS, HTML
-* Develop a program that reads “threat” meta files and renders them in a table using Ajax.
-* Each row should also be color-coded based on the record's threat level (rating)
+* Develop a program that reads text files with records and renders them in a table using Ajax.
+* Each row should also be color-coded based on the record's rating
 * The table should also allow sorting
 * If a new record is detected and should be included in the table based on its state (time-period, an alert should be presented to the user informing them to reload the table).
 
 **What was completed:**
 + Django serves a Frontend page that utlizes Javascript/jQuery
-+ Once the page loads, it will request for virus data
++ Once the page loads, it will request for the records
 + Django Backend will read all files from a predefined directory and compiled the lists of json objets into a single list
 + The Frontend page will receive the JSONResponse and use it to render the table
 + Sorting and Filtering are done in the Frontend with Javascript/jquery
