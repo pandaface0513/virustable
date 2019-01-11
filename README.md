@@ -23,5 +23,4 @@
 ]
 ```
 
-5. Once you are ready with the meta data files, you can run the following code in your terminal
-`run python3 manage.py runserver` at the root folder of this repo
+5. Once you are ready with the meta data files, you can run the following code in your terminal and run `python manage.py runserver` at the root folder of this repo
