@@ -1,7 +1,5 @@
 # virustable
-======
 ## instruction
-------
 1. Downlad or Git Clone this entire repo
 2. In the root folder, there is a static folder - *static/vdata* folder is where the meta data files are stored
 3. Each meta data file contains a list of JSON records
