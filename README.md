@@ -17,10 +17,10 @@ This github repo will created to complete a 48 hours remote test for a Web UI De
 + Sorting and Filtering are done in the Frontend with Javascript/jquery
 + The color-coded table rows are done with CSS classes
 - I wasn't sure work on new record detection, here is my thought process
-⋅⋅- Django monitors the predefined directiory (maybe listDir every few seconds?)
-⋅⋅- Once it finds a difference from last listDir result
-⋅⋅- Send a message to the Frontend page
-⋅⋅- Frontend page receives the message and send an alert to users
+   - Django monitors the predefined directiory (maybe listDir every few seconds?)
+   - Once it finds a difference from last listDir result
+   - Send a message to the Frontend page
+   - Frontend page receives the message and send an alert to users
 
 **What I might do differently:**
 * I think I could have made two Django apps, one for Frontend, one for the Backend
