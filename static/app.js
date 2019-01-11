@@ -9,7 +9,18 @@ let TIMEOFFSET = {
     "century": 3600*24*7*4*12*100
 }
 
+let RATINGS = {
+    "malicious": 5,
+    "high-risk": 4,
+    "medium-risk": 3,
+    "low-risk": 2,
+    "clean": 1
+}
+
 let METADATA = [];
+
+let currentSortColumn = "";
+let asc = true;
 
 $(document).ready(function() {
     $("#time-filter").change(filterUpdate);
@@ -17,8 +28,12 @@ $(document).ready(function() {
 });
 
 let filterUpdate = (e) => {
+    updateTable(filterByTime(METADATA));
+}
+
+let updateTable = (newDataList) => {
     clearTable();
-    renderTable(filterByTime(METADATA));
+    renderTable(newDataList);
 }
 
 let getFilterValue = () => {
@@ -44,8 +59,46 @@ let clearTable = () => {
     tableDiv.parentNode.removeChild(tableDiv);
 }
 
-let sortTable = () => {
-    let table, rows, switching, i, x, y, shouldSwitch;
+let sortTable = (index) => {
+    console.log("Sort by " + HEADERS[index]);
+    let key = HEADERS[index];
+
+    if (currentSortColumn === key) {
+        asc = !asc;
+    } else {
+        asc = true;
+    }
+    currentSortColumn = key;
+
+    let trimData = filterByTime(METADATA);
+    let result = trimData.sort((a, b) => {
+        let key = HEADERS[index];
+        let valueA, valueB;
+
+        if (key === "date") { 
+            valueA = new Date(a[key]).getTime();
+            valueB = new Date(b[key]).getTime();
+        }
+        else if (key === "rating") {
+            valueA = RATINGS[a[key]];
+            valueB = RATINGS[b[key]];
+        }
+        else {
+            valueA = a[key];
+            valueB = b[key];
+        }
+
+        if (valueA > valueB) {
+            return asc ? 1 : -1;
+        }
+
+        if (valueA < valueB) {
+            return asc ? -1 : 1;
+        }
+
+        return 0;
+    });
+    updateTable(result);
 }
 
 let filterByTime = (dataList) => {
