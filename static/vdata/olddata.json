@@ -1,0 +1,44 @@
+[
+    {
+        "date": "Dec 1, 2018 13:10:59",
+        "filename": "virus.exe",
+        "action": "files-deleted",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "malicious"
+    },
+    {
+        "date": "Jan 10, 2019 19:12:59",
+        "filename": "helper.exe",
+        "action": "files-added",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "low-risk"
+    },
+    {
+        "date": "Dec 21, 2018 13:10:59",
+        "filename": "virus.exe",
+        "action": "files-deleted",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "low-risk"
+    },
+    {
+        "date": "Jan 5, 2019 19:12:59",
+        "filename": "henry.exe",
+        "action": "files-added",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "medium-risk"
+    },
+    {
+        "date": "Dec 11, 2018 13:10:59",
+        "filename": "kevin.exe",
+        "action": "files-deleted",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "clean"
+    },
+    {
+        "date": "Dec 25, 2018 19:12:59",
+        "filename": "christmas.exe",
+        "action": "files-added",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "low-risk"
+    }
+]

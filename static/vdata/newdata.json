@@ -1,0 +1,65 @@
+[
+    {
+        "date": "Jan 7, 2019 15:10:59",
+        "filename": "newyear.exe",
+        "action": "files-deleted",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "high-risk"
+    },
+    {
+        "date": "Jan 5, 2019 19:12:59",
+        "filename": "helper.exe",
+        "action": "files-added",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "low-risk"
+    },
+    {
+        "date": "Jan 10, 2019 10:10:59",
+        "filename": "virus.exe",
+        "action": "files-deleted",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "medium-risk"
+    },
+    {
+        "date": "Jan 15, 2019 19:12:59",
+        "filename": "henry.exe",
+        "action": "files-added",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "clean"
+    },
+    {
+        "date": "Jan 10, 2019 21:10:59",
+        "filename": "kevin.exe",
+        "action": "files-deleted",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "clean"
+    },
+    {
+        "date": "Jan 10, 2019 21:25:59",
+        "filename": "notholiday.exe",
+        "action": "files-added",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "low-risk"
+    },
+    {
+        "date": "Jan 10, 2019 17:23:59",
+        "filename": "thursday.exe",
+        "action": "files-added",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "low-risk"
+    },
+    {
+        "date": "Jan 10, 2019 17:23:51",
+        "filename": "throwback.exe",
+        "action": "files-added",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "low-risk"
+    },
+    {
+        "date": "Jan 10, 2019 23:25:59",
+        "filename": "future.exe",
+        "action": "files-added",
+        "submit-type": "FG300B3910602113/root",
+        "rating": "medium-risk"
+    }
+]

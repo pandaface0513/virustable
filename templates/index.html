@@ -1,6 +1,6 @@
 {% load static %}
 
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -8,24 +8,29 @@
   <title>Virus Table</title>
   <meta name="description" content="The Virus Table">
   <meta name="author" content="Henry Lo">
+  <!-- Loading the custom CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 
 <body>
+  <!-- Main div named as app -->
   <div id="app">
+    <!-- Title -->
     <h1>Virus Metadata table</h1>
+    <!-- Time period filter -->
     <label>Time Period Filter: </label>
     <select id="time-filter">
       <option value="day">24-hours</option>
       <option value="week">7 days</option>
       <option value="month">4 weeks</option>
-      <option value="century">100 years</option>
     </select>
   </div>
+  <!-- Loading jQuery -->
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+  <!-- Loading the app.js -->
   <script src="{% static 'app.js' %}"></script>
 </body>
 </html>
