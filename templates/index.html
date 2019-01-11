@@ -1,0 +1,31 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Virus Table</title>
+  <meta name="description" content="The Virus Table">
+  <meta name="author" content="Henry Lo">
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+
+<body>
+  <div id="app">
+    <h1>Virus Metadata table</h1>
+    <label>Time Period Filter: </label>
+    <select id="time-filter">
+      <option value="day">24-hours</option>
+      <option value="week">7 days</option>
+      <option value="month">4 weeks</option>
+      <option value="century">100 years</option>
+    </select>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="{% static 'app.js' %}"></script>
+</body>
+</html>

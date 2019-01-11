@@ -1,0 +1,36 @@
+table {
+    width: 100%;
+    text-align: center;
+}
+
+th {
+    cursor: pointer;
+    font-weight: 600;
+    background-color: grey;
+    color: white;
+    text-transform: uppercase;
+}
+
+th:hover {
+    background-color: lightskyblue;
+}
+
+.malicious {
+    background-color: #CC3300;
+}
+
+.high-risk {
+    background-color: #FF9966;
+}
+
+.medium-risk {
+    background-color: #FFCC00;
+}
+
+.low-risk {
+    background-color: #99CC33;
+}
+
+.clean {
+    background-color: #339900;
+}

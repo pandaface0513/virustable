@@ -1,46 +1,26 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import JsonResponse
+
+import os
+import re
+import json
 
 # Create your views here.
 def index(request):
-    latest_virus_list = [
-        {
-            'date': 'Jan 1, 2015 13:10:59',
-            'filename': 'virus.exe',
-            'action': 'files-deleted',
-            'submit-type': 'FG300B3910602113/root',
-            'rating': 'high-risk'
-        },
-        {
-            'date': 'Jan 1, 2015 13:12:59',
-            'filename': 'helper.exe',
-            'action': 'files-added',
-            'submit-type': 'FG300B3910602113/root',
-            'rating': 'low-risk'
-        },
-        {
-            'date': 'Jan 1, 2015 13:12:59',
-            'filename': 'helper.exe',
-            'action': 'files-added',
-            'submit-type': 'FG300B3910602113/root',
-            'rating': 'malicious'
-        },
-        {
-            'date': 'Jan 1, 2015 13:12:59',
-            'filename': 'helper.exe',
-            'action': 'files-added',
-            'submit-type': 'FG300B3910602113/root',
-            'rating': 'clean'
-        },
-        {
-            'date': 'Jan 1, 2015 13:12:59',
-            'filename': 'helper.exe',
-            'action': 'files-added',
-            'submit-type': 'FG300B3910602113/root',
-            'rating': 'medium-risk'
-        }
-    ]
-    context = {
-        'latest_virus_list': latest_virus_list
-    }
-    return render(request, 'vtableapp/index.html', context)
+    vdata_list = readMetafiles()
+    return JsonResponse({
+        'vlist': vdata_list
+    })
+
+def readMetafiles():
+    path = "static/vdata"
+    file_list = os.listdir(path)
+    print("hi")
+    combined_data = []
+    for name in file_list:
+        fullname = os.path.join(path, name)
+        with open(fullname) as f:
+            json_decode = json.load(f)
+            for json_obj in json_decode:
+                combined_data.append(json_obj)
+    return combined_data
